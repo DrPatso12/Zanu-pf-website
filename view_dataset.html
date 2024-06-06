@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    {% load static %}
+<title>VictoryPro | Contact</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/coin-slider.css' %}" />
+<script type="text/javascript" src="{% static 'js/cufon-yui.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/cufon-georgia.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery-1.4.2.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/coin-slider.min.js' %}"></script>
+     <style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  background-color:white;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #157D75;
+  color: white;
+}
+</style>
+</head>
+<body>
+<h2 style="color:white;text-align:center;font-size:40px;font-weight:bold;">Smart College Chatbot Using ML And Python</h2>
+<div class="main">
+  <div class="header">
+      <div class="logo">
+
+      </div>
+    <div class="header_resize">
+      <div class="menu_nav">
+        <ul>
+          <li ><a href="{% url 'user_home'%}" style="color:white;"><span>Upload Data To Dataset</span></a></li>
+          <li><a href="{% url 'view_dataset'%}" style="color:white;"><span>View Dataset</span></a></li>
+          <li><a href="{% url 'admin_login'%}" style="color:white;"><span>Logout</span></a></li>
+
+        </ul>
+      </div>
+
+      <div class="clr"></div>
+      <div class="slider1">
+        <div id="coin-slider1"><img src="{% static 'images/banner1.jpg'%}" width="960" height="360" alt="" /></div>
+        <div class="clr"></div>
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="content_resize">
+      <div class="mainbar">
+
+        <div class="article">
+          <h2><span style="color:black;font-weight:bold;margin-left:350px;color:white;font-weight:bold;">View Dataset</h2><br>
+              <table id="customers" style="margin-left:130px;">
+        <thead>
+        <tr class="warning">
+            <th>Id</th>
+            <th>Pattern</th>
+             <th>Response</th>
+
+
+
+
+        </tr>
+        </thead>
+        {% for i in data1 %}
+       <tbody>
+        <tr>
+             <td>{{i.id}}</td>
+            <td>{{i.qrequest}}</td>
+            <td>{{i.qresponse}}</td>
+
+
+
+                 </tr>
+       </tbody>
+        {% endfor %}
+    </table>
+
+          <div class="clr"></div>
+
+        </div>
+      </div>
+
+      <div class="clr"></div>
+    </div>
+  </div>
+
+  <div class="footer">
+
+      <p class="lf" style="text-align:center;color:white;">Smart College Chatbot Using ML And Python</p>
+        <div style="clear:both;"></div>
+
+  </div>
+</div>
+</body>
+</html>
